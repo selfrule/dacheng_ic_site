@@ -15,9 +15,6 @@ module quickSort {
     return Array.freeze(result);
   };
 
-
-
-
   /**
   * 
   * @param {*} arr  数组
