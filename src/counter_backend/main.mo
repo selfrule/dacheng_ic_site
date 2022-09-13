@@ -1,45 +1,22 @@
-import Principal "mo:base/Principal";
 import Nat "mo:base/Nat";
 import Int "mo:base/Int";
-import quickSort "quicksort";
 import Text "mo:base/Text";
-// import Counter  "counters";
 
 actor {
 
-  public func greet(name : Text) : async Text {
-      return "Hello, " # name # "!";
-  };
-
-  func fib(n: Nat): Nat{
-      if(n <= 1){
-        1
-      }else{
-        fib(n - 1) + fib(n + 2)
-      }
-  };
-
-  public func fibonacci(n: Nat) : async Text {
-    "fib(" # Nat.toText(n) # ")="  # Nat.toText(fib(n))
-  };
-  
-  public query func qsort(arr : [Int]) : async [Int] {
-    return quickSort.quickSortMain(arr, Int.compare);
-  };
-
   stable var currentValue : Nat = 0;
 
-  // Increment the counter with the increment function.
+  // 自增
   public func increment() : async () {
     currentValue += 1;
   };
 
-  // Read the counter value with a get function.
+  // 读取值
   public query func get() : async Nat {
     currentValue
   };
 
-  // Write an arbitrary value with a set function.
+  // 设置值
   public func set(n: Nat) : async () {
     currentValue := n;
   };

@@ -6,6 +6,10 @@
       "type": "motoko",
       "main": "src/mysite_backend/main.mo"
     },
+    "counter_backend": {
+      "type": "motoko",
+      "main": "src/counter_backend/main.mo"
+    },
     "mysite_frontend": {
       "type": "assets",
       "source": [
@@ -13,6 +17,15 @@
       ],
       "dependencies": [
         "mysite_backend"
+      ]
+    },
+    "counter_frontend": {
+      "type": "assets",
+      "source": [
+        "src/counter_frontend/assets"
+      ],
+      "dependencies": [
+        "counter_backend"
       ]
     }
   },
