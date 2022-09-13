@@ -6,20 +6,20 @@ actor {
 
   stable var currentValue : Nat = 0;
 
+  // 读取值
+  public query func get() : async Nat {
+    currentValue
+  };
+  // 设置值
+  public func set(n: Nat) : async () {
+    currentValue := n;
+  };
   // 自增
   public func increment() : async () {
     currentValue += 1;
   };
 
-  // 读取值
-  public query func get() : async Nat {
-    currentValue
-  };
 
-  // 设置值
-  public func set(n: Nat) : async () {
-    currentValue := n;
-  };
 
   type HttpRequest = {
     body: Blob;
