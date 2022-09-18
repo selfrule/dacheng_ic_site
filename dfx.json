@@ -10,6 +10,14 @@
       "type": "motoko",
       "main": "src/counter_backend/main.mo"
     },
+    "blog_backend": {
+      "type": "motoko",
+      "main": "src/blog_backend/main.mo"
+    },
+    "blog_backend2": {
+      "type": "motoko",
+      "main": "src/blog_backend2/main.mo"
+    },
     "mysite_frontend": {
       "type": "assets",
       "source": [
